@@ -2,7 +2,8 @@ package lab7
 
 object PartiallyAppliedFunctions extends App{
 
-  //first partially applied function example
+  /****partially applied function example which is supplied with one parameter*****/
+
   def calculatePrice(discount: Double, price: Double): Double = {
     (1 - discount/100) * price
   }
@@ -15,8 +16,9 @@ object PartiallyAppliedFunctions extends App{
   println(discount_10(200))		//180
 
 
-  //to partially applied functions we can pass as many arguments as we want
-  // (no more than in original function)
+  /******to partially applied functions we can pass as many arguments as we want
+  (no more than in original function) *****/
+
   def greeting(greet: String, name: String, sign: String): String = {
     greet + " " + name + sign
   }
@@ -27,9 +29,9 @@ object PartiallyAppliedFunctions extends App{
   println(eveningGreeting("Eva"))
 
 
-  //partially applied function which doesn't apply any parameter
+  /******* partially applied function which doesn't apply any parameter *****/
   def multiply(x: Int, y: Int) : Int = x * y
-  val multiply_2 = multiply _   //we dont pass any parameter to the partialyy applied function
+  val multiply_2 = multiply _   //we dont pass any parameter to this partially applied function
   println(multiply(2, 4))
   println(multiply_2(2, 4))
 
