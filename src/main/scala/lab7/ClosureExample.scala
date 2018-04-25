@@ -51,8 +51,24 @@ object ClosureExample extends App {
 
   goShopping(addToBasket, "Chocolate")
   goShopping(addToBasket, "Orange")
+  basket.remove(0)
   goShopping(addToBasket, "Coca-cola")
+  println("Items in the basket: " + basket.mkString(", ")) //the same line as in addToBasket function
 
 
+
+  //closure example with list variable
+  def sumNumbers = {
+    numbers.foreach(sum += _)
+  }
+  val numbers = List(1, 2, 3, 4, 5)
+  var sum = 0
+
+
+  def execute(f: => Unit){
+    f
+  }
+  execute(sumNumbers)
+  println(sum)
 
 }
