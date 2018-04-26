@@ -55,7 +55,6 @@ object ClosureExample extends App {
   println("Items in the basket: " + basket.mkString(", ")) //the same line as in addToBasket function
 
 
-
   /******** closure example with list variable *********/
 
   def sumNumbers = {
@@ -63,7 +62,6 @@ object ClosureExample extends App {
   }
   val numbers = List(1, 2, 3, 4, 5)
   var sum = 0
-
 
   def execute(f: => Unit){
     f
