@@ -4,7 +4,7 @@ import scala.collection.mutable.ArrayBuffer
 object ClosureExample extends App {
 
 
-  //closure example with Integer variables
+  /********** closure example with Integer variables *********/
 
   var adultAge = 18
   val isAdult = (age: Int) => age >= adultAge
@@ -20,7 +20,7 @@ object ClosureExample extends App {
 
 
 
-  //closure example with String  variables
+  /******* closure example with String  variables ********/
 
   var name = "Mark"
   val introduction = "My name is"
@@ -34,9 +34,8 @@ object ClosureExample extends App {
 
 
 
-  //closures can work with any data type, including collections
-
-  //closure example with ArrayBuffer
+  /********* closures can work with any data type, including collections
+             closure example with ArrayBuffer ******/
 
   val basket = ArrayBuffer("Apple")
   //function addToBasket can be passed to another function and still will have a reference to basket value
@@ -57,7 +56,8 @@ object ClosureExample extends App {
 
 
 
-  //closure example with list variable
+  /******** closure example with list variable *********/
+
   def sumNumbers = {
     numbers.foreach(sum += _)
   }
