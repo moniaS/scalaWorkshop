@@ -1,6 +1,3 @@
-/**
-  * Created by mstobieniecka on 2018-04-24.
-  */
 object CurriedFunctionsExample extends App {
 
     /************** PRZYKŁAD 1 - różne sposoby zapisu curried functions **************/

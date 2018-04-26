@@ -1,10 +1,5 @@
-package byNameParams
-
 import scala.util.Random
 
-/**
-  * Created by mstobieniecka on 2018-04-25.
-  */
 object ByNameParametersExample extends App {
 
   /************** PRZYKŁAD 1 - parametry by-name vs parametry by-value **************/

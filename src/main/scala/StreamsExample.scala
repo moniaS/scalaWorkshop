@@ -1,11 +1,5 @@
-package streams
-
 import scala.Stream._
-import scala.math.BigInt
 
-/**
-  * Created by mstobieniecka on 2018-04-25.
-  */
 object StreamsExample extends App{
 
   /************** PRZYKŁAD 1 - tworzenie strumieni **************/
@@ -18,8 +12,8 @@ object StreamsExample extends App{
   println(s"Elements of stream1 = $stream1")
   println(s"Elements of stream2 = $stream2")
   println(s"Elements of stream3 = $stream3")
-  println(s"Elements of stream3 = $stream4")
-  println(s"Elements of stream3 = $emptyStream")
+  println(s"Elements of stream4 = $stream4")
+  println(s"Elements of emptyStream = $emptyStream")
 
   stream1.take(5).print     //nie powoduje rzucenia wyjątkiem
 
@@ -32,7 +26,9 @@ object StreamsExample extends App{
   println(evenNumbers.take(20).max)
 
   /************** PRZYKŁAD 3 - ciąg Fibonacciego *****************/
-  val fibs: Stream[BigInt] = BigInt(0) #:: BigInt(1) #:: fibs.zip(fibs.tail).map { n => n._1 + n._2 }
+  def fibFrom(a: Int, b: Int): Stream[Int] = a #:: fibFrom(b, a + b)
+
+  val fibs = fibFrom(0, 1)
 
   fibs.take(10).print
 
