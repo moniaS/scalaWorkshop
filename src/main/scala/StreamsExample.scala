@@ -33,8 +33,9 @@ object StreamsExample extends App{
   fibs.take(10).print
 
   /************** PRZYKŁAD 4 - liczby pierwsze *******************/
-  def primeStream(s: Stream[Int]): Stream[Int] =
-    Stream.cons(s.head, primeStream(s.tail filter { _ % s.head != 0 }))
+  def primeStream(s: Stream[Int]): Stream[Int] = {
+    s.head #:: primeStream(s.tail.filter {_ % s.head != 0})
+  }
   val primes = primeStream(Stream.from(2))
 
   primes.take(10).print
